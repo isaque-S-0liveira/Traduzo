@@ -13,10 +13,10 @@ class LanguageModel(AbstractModel):
     def to_dict(self):
         return {
             "name": self.data["name"],
-            "acronyms": self.data["acronym"],
+            "acronym": self.data["acronym"],
         }
 
     # Req. 3
     @classmethod
     def list_dicts(cls):
-        raise NotImplementedError
+        return [language.to_dict() for language in cls.find()]

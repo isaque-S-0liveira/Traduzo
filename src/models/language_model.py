@@ -1,11 +1,13 @@
-# from .abstract_model import AbstractModel
-# from database.db import db
+from .abstract_model import AbstractModel
+from database.db import db
 
 
 # Req. 1
-class LanguageModel:
-    def __init__(self):
-        raise NotImplementedError
+class LanguageModel(AbstractModel):
+    _collection = db["languages"]
+
+    def __init__(self, data: dict):
+        super().__init__(data)
 
     # Req. 2
     def to_dict(self):

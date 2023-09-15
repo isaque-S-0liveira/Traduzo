@@ -58,4 +58,23 @@ def index():
 # Req. 6
 @translate_controller.route("/reverse", methods=["POST"])
 def reverse():
-    raise NotImplementedError
+    languages = LanguageModel.list_dicts()
+
+    if request.method == "POST":
+        text_to_translate = request.form.get("text-to-translate")
+        translate_to = request.form.get("translate-from")
+        translate_from = request.form.get("translate-to")
+        old_translate = translate_text(
+            translate_to, translate_from, text_to_translate
+        )
+        translated = translate_text(
+            translate_from, translate_to, text_to_translate
+        )
+        return render_template(
+            "index.html",
+            languages=languages,
+            text_to_translate=translated,
+            translate_from=translate_from,
+            translate_to=translate_to,
+            translated=old_translate,
+        )

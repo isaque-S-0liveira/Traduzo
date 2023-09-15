@@ -20,8 +20,8 @@
           <li class="row from">
             <select name="translate-from">
               {% for language in languages %}
-              <option value="{{ language.to_dict()['name'] }}" {% if language.to_dict()['acronym']==translate_from
-                %}selected{% endif %}>{{language.to_dict()['name']|upper}}</option>
+              <option value="{{ language.acronym }}" {% if language.acronym==translate_from %}selected{% endif %}>
+                {{language.name|upper}}</option>
               {% endfor %}
             </select>
           </li>
@@ -32,8 +32,8 @@
             <select name="translate-to">
               {% for language in languages %}
 
-              <option value="{{ language.to_dict()['name'] }}" {% if language.to_dict()['acronym']==translate_to
-                %}selected{% endif %}>{{ language.to_dict()['name']|upper }}
+              <option value="{{ language.acronym }}" {% if language.acronym==translate_to
+                %}selected{% endif %}>{{ language.name|upper }}
 
               </option>
               {% endfor %}

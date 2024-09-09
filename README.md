@@ -12,6 +12,11 @@
 
 O foco principal deste projeto é, com base nos ensinamentos da **Trybe**, desenvolver uma ferramenta de tradução de textos entre vários idiomas utilizando **Python** e o framework **Flask** para criar uma aplicação Server-Side. A aplicação permitirá que os usuários realizem traduções de textos entre diferentes idiomas, utilizando uma interface web gerada no backend e interagindo com um banco de dados não relacional (**MongoDB**). A aplicação oferece suporte à tradução reversa e mantém um histórico das traduções realizadas.
 
+<details>
+  <summary>O que é a Trybe?🤔</summary>
+  A Trybe é uma escola de desenvolvimento web genuinamente comprometida com o sucesso profissional de seus estudantes. Com o Modelo de Sucesso Compartilhado (MSC) oferecido pela Trybe Fintech, uma instituição financeira autorizada pelo Banco Central do Brasil, os alunos têm a opção de pagar apenas quando estiverem trabalhando.
+</details>
+
 A aplicação é construída utilizando a arquitetura **MVC (Model-View-Controller)**, separando as responsabilidades da camada de dados, lógica de negócios e apresentação. Além disso, foram aplicados conceitos de **Orientação a Objetos (POO)** no desenvolvimento das funcionalidades e das interações com o banco de dados.
 
 ### Principais Funcionalidades:
